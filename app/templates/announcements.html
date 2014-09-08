@@ -4,5 +4,11 @@
   </ion-nav-buttons>
   <ion-content class="has-header">
     <h1>Announcements</h1>
+     <ion-list>
+      <ion-item ng-repeat="event in events" type="item-text-wrap" href="#/app/announcement/{{event.nid}}">
+        <h3>{{event.title}}</h3>
+        {{event.nid}}
+      </ion-item>
+ </ion-list>
   </ion-content>
 </ion-view>

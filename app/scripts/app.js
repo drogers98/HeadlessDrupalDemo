@@ -6,7 +6,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('YouthworksMobil', ['ionic', 'config', 'YouthworksMobil.controllers'])
+angular.module('YouthworksMobil', ['ionic', 'config', 'YouthworksMobil.controllers', 'YouthworksMobil.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -49,12 +49,24 @@ angular.module('YouthworksMobil', ['ionic', 'config', 'YouthworksMobil.controlle
         }
       }
     })
-
+    
+        // the pet tab has its own child nav-view and history
     .state('app.announcements', {
       url: '/announcements',
       views: {
-        'menuContent' :{
-          templateUrl: 'templates/announcements.html'
+        'menuContent': {
+          templateUrl: 'templates/announcements.html',
+          controller: 'EventIndexCtrl'
+        }
+      }
+    })
+
+    .state('app.announcementDetail', {
+      url: '/announcement/:eventId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/announcementDetail.html',
+          controller: 'EventDetailCtrl'
         }
       }
     })
