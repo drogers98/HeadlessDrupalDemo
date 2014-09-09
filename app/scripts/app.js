@@ -65,7 +65,7 @@ angular.module('YouthworksMobil', ['ionic', 'config', 'YouthworksMobil.controlle
       url: '/announcement/:id',
       views: {
         'menuContent': {
-          templateUrl: 'templates/announcementDetail.html',
+          templateUrl: 'templates/announcement.html',
           controller: 'EventDetailCtrl'
         }
       }

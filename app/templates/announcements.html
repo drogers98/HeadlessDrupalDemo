@@ -5,7 +5,7 @@
   <ion-content class="has-header">
     <h1>Announcements</h1>
      <ion-list>
-      <ion-item ng-repeat="announcment in announcments" type="item-text-wrap" href="#/app/announcement/{{event.nid}}">
+      <ion-item ng-repeat="announcment in announcments" type="item-text-wrap" href="#/app/announcement/{{announcment.nid}}">
         <h3>{{announcment.title}}</h3>
         {{announcment.nid}}
       </ion-item>
