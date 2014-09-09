@@ -7,15 +7,24 @@ angular.module('YouthworksMobil.controllers', [])
 
 })
 
-// A simple controller that fetches a list of data from a service
-.controller('EventIndexCtrl', function($scope, EventService) {
-  // "Pets" is a service returning mock data (services.js)
-  $scope.events = EventService.all();
+.controller('EventIndexCtrl', function($scope, $stateParams, EventService) {
+	$scope.announcment;
+
+	EventService.announcments().then(function(announcments){
+		$scope.announcments = announcments.data;
+		console.log($scope.announcments);
+	})
 })
 
 
 // A simple controller that shows a tapped item's data
 .controller('EventDetailCtrl', function($scope, $stateParams, EventService) {
-  // "Pets" is a service returning mock data (services.js)
-  $scope.event = EventService.get($stateParams.eventId);
-});
+	$scope.announcment;
+	var id = $stateParams.id;
+
+	EventService.announcments().then(function(announcments){
+		EventService.announcment(announcments.data,id, function(announcment){
+			$scope.announcment = announcment;
+			})
+		})
+	});

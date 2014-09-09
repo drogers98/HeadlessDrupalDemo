@@ -3,28 +3,30 @@ angular.module('YouthworksMobil.services', [])
 /**
  * A simple example service that returns some data.
  */
-.factory('EventService', function($http) {
-  // Might use a resource here that returns a JSON array
- 
-    
-    var events = [];
-  
+.factory('YouthWorksAPI', function($http) {
+   var proto = $http.get,
+        path = 'http://test-youth-works.gotpantheon.com/api/views/announcements.json',
+    callback = '?callback=JSON_CALLBACK';
 
-    $http.get('http://test-youth-works.gotpantheon.com/api/views/announcements.json').success(function(data) {
-        // you can do some processing here
-        var events = data;
-       console.log(events);
-       
-    });
 
+   return {
+     loadEndpoint: function() {
+       return proto(path+callback);
+     }
+   }
+ })
+
+.factory('EventService', function(YouthWorksAPI) {
   return {
-    all: function() {
-      return events;
-       
+    announcments: function() {
+      return YouthWorksAPI.loadEndpoint();
     },
-    get: function(eventId) {
-      // Simple index lookup
-      return events[eventId];
+    announcment: function(announcments,id,callback){
+      var findAnnouncment = {};
+      for(var i=0;i<announcments.length;i++) {
+        findAnnouncment[announcments[i].nid] = announcments[i];
+      }
+      callback(findAnnouncment[id]);
     }
   }
 });

@@ -31,7 +31,7 @@ angular.module('YouthworksMobil', ['ionic', 'config', 'YouthworksMobil.controlle
       templateUrl: 'templates/menu.html',
       controller: 'AppCtrl'
     })
-    
+
         .state('app.home', {
       url: '/home',
       views: {
@@ -49,7 +49,7 @@ angular.module('YouthworksMobil', ['ionic', 'config', 'YouthworksMobil.controlle
         }
       }
     })
-    
+
         // the pet tab has its own child nav-view and history
     .state('app.announcements', {
       url: '/announcements',
@@ -61,8 +61,8 @@ angular.module('YouthworksMobil', ['ionic', 'config', 'YouthworksMobil.controlle
       }
     })
 
-    .state('app.announcementDetail', {
-      url: '/announcement/:eventId',
+    .state('app.announcement', {
+      url: '/announcement/:id',
       views: {
         'menuContent': {
           templateUrl: 'templates/announcementDetail.html',
@@ -70,7 +70,7 @@ angular.module('YouthworksMobil', ['ionic', 'config', 'YouthworksMobil.controlle
         }
       }
     })
-    
+
     .state('app.about', {
       url: '/about',
       views: {
@@ -79,7 +79,7 @@ angular.module('YouthworksMobil', ['ionic', 'config', 'YouthworksMobil.controlle
         }
       }
     })
-    
+
     .state('app.contact', {
       url: '/contact',
       views: {
@@ -92,4 +92,3 @@ angular.module('YouthworksMobil', ['ionic', 'config', 'YouthworksMobil.controlle
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
 });
-
