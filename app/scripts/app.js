@@ -1,17 +1,13 @@
 'use strict';
-// Ionic Starter App, v0.9.20
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-// 'starter.services' is found in services.js
-// 'starter.controllers' is found in controllers.js
+// the 2nd parameter is an array of 'requires.' In this case ionic, our controllers, and our services
 angular.module('YouthworksMobil', ['ionic', 'YouthworksMobil.controllers', 'YouthworksMobil.services'])
 
+// Some things relatedb specific to native (cordova) build, if doing so.
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
-    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-    // for form inputs)
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard, for form inputs)
     if(window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
     }
@@ -22,9 +18,10 @@ angular.module('YouthworksMobil', ['ionic', 'YouthworksMobil.controllers', 'Yout
   });
 })
 
+// Configure the routes for navigating the application
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
-
+  // Notice that the "controller" is specified for the states that need a specific one. This saves us from having to specify it in the template later.
     .state('app', {
       url: '/app',
       abstract: true,
@@ -87,7 +84,7 @@ angular.module('YouthworksMobil', ['ionic', 'YouthworksMobil.controllers', 'Yout
           templateUrl: 'templates/contact.html'
         }
       }
-    })
+    });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');

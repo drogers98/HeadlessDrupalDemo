@@ -1,17 +1,18 @@
+'use strict';
 angular.module('YouthworksMobil.services', [])
 
 // Set the base of operations for the JSON calls. 
 .factory('YouthWorksAPI', function($http) {
-    var proto = $http.get,
+	var proto = $http.get,
     	// Base path of the API
         basePath = 'http://test-youth-works.gotpantheon.com/api/',
 		callback = '?callback=JSON_CALLBACK';
 
-   return {
-     loadEndpoint: function(path) {
-       return proto(basePath+path+callback);
-     }
-   }
+	   return {
+	     loadEndpoint: function(path) {
+	       return proto(basePath+path+callback);
+	     }
+   };
  })
 
 .factory('EventService', function(YouthWorksAPI) {
@@ -27,7 +28,7 @@ angular.module('YouthworksMobil.services', [])
       }
       callback(findAnnouncment[id]);
     }
-  }
+  };
 })
 
 
@@ -38,5 +39,5 @@ angular.module('YouthworksMobil.services', [])
       // Call the API, and define the specific endpoint
       return YouthWorksAPI.loadEndpoint('node/1.json');
     }
-  }
+  };
 });
