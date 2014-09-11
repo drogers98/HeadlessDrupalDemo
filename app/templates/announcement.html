@@ -1,5 +1,9 @@
 <ion-view title="{{announcment.title}}">
   <ion-content padding="true">
-    <p>{{ announcment.nid }}</p>
+  
+  <!-- Bind the body to a div to account for html. Notice the scheme for digging into the views generated array -->
+  <div ng-bind-html="announcment.body.und.0.safe_value"></div>
+  <h5>You are now viewing drupal NID: {{announcment.nid}}</h5>
+  
   </ion-content>
 </ion-view>

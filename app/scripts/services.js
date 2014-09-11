@@ -1,17 +1,15 @@
 angular.module('YouthworksMobil.services', [])
 
-/**
- * A simple example service that returns some data.
- */
+// Set the base of operations for the JSON calls. 
 .factory('YouthWorksAPI', function($http) {
-   var proto = $http.get,
-        path = 'http://test-youth-works.gotpantheon.com/api/views/announcements.json',
-    callback = '?callback=JSON_CALLBACK';
-
+    var proto = $http.get,
+    	// Base path of the API
+        basePath = 'http://test-youth-works.gotpantheon.com/api/',
+		callback = '?callback=JSON_CALLBACK';
 
    return {
-     loadEndpoint: function() {
-       return proto(path+callback);
+     loadEndpoint: function(path) {
+       return proto(basePath+path+callback);
      }
    }
  })
@@ -19,7 +17,8 @@ angular.module('YouthworksMobil.services', [])
 .factory('EventService', function(YouthWorksAPI) {
   return {
     announcments: function() {
-      return YouthWorksAPI.loadEndpoint();
+      // Call the API, and define the specific endpoint
+      return YouthWorksAPI.loadEndpoint('views/announcements.json');
     },
     announcment: function(announcments,id,callback){
       var findAnnouncment = {};
@@ -27,6 +26,17 @@ angular.module('YouthworksMobil.services', [])
         findAnnouncment[announcments[i].nid] = announcments[i];
       }
       callback(findAnnouncment[id]);
+    }
+  }
+})
+
+
+// Call A specific node. Hook up for about page.
+.factory('AboutService', function(YouthWorksAPI) {
+  return {
+    about: function() {
+      // Call the API, and define the specific endpoint
+      return YouthWorksAPI.loadEndpoint('node/1.json');
     }
   }
 });

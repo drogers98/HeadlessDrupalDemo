@@ -27,4 +27,13 @@ angular.module('YouthworksMobil.controllers', [])
 			$scope.announcment = announcment;
 			})
 		})
-	});
+	})
+	
+	.controller('AboutCtrl', function($scope, AboutService) {
+	$scope.about;
+
+	AboutService.about().then(function(about){
+		$scope.about = about.data;
+		console.log($scope.about);
+	})
+});

@@ -7,6 +7,10 @@ Components:
 - D7
 - Angular.js
 - ionic
+- Grunt.js
+- Bower
 
 Modules:
--Services
+- Services
+- CORS
+- Views
