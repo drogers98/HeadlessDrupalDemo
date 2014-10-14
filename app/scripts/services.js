@@ -1,10 +1,10 @@
 'use strict';
-angular.module('YouthworksMobil.services', [])
+angular.module('EBSheadlessDrupal.services', [])
 
 // Set the base of operations for the JSON calls. 
-.factory('YouthWorksAPI', function($http) {
+.factory('EBSheadlessDrupalAPI', function($http) {
 	var proto = $http.get,
-    	// Base path of the API
+    	// Base path of the API we set up
         basePath = 'http://test-youth-works.gotpantheon.com/api/',
 		callback = '?callback=JSON_CALLBACK';
 
@@ -15,11 +15,12 @@ angular.module('YouthworksMobil.services', [])
    };
  })
 
-.factory('EventService', function(YouthWorksAPI) {
+// Call A specific views JSON.
+.factory('EventService', function(EBSheadlessDrupalAPI) {
   return {
     announcments: function() {
       // Call the API, and define the specific endpoint
-      return YouthWorksAPI.loadEndpoint('views/announcements.json');
+      return EBSheadlessDrupalAPI.loadEndpoint('views/announcements.json');
     },
     announcment: function(announcments,id,callback){
       var findAnnouncment = {};
@@ -32,12 +33,12 @@ angular.module('YouthworksMobil.services', [])
 })
 
 
-// Call A specific node. Hook up for about page.
-.factory('AboutService', function(YouthWorksAPI) {
+// Call A specific node by NID.
+.factory('AboutService', function(EBSheadlessDrupalAPI) {
   return {
     about: function() {
       // Call the API, and define the specific endpoint
-      return YouthWorksAPI.loadEndpoint('node/1.json');
+      return EBSheadlessDrupalAPI.loadEndpoint('node/1.json');
     }
   };
 });

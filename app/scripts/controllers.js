@@ -1,5 +1,5 @@
 'use strict';
-angular.module('YouthworksMobil.controllers', [])
+angular.module('EBSheadlessDrupal.controllers', [])
 
 .controller('AppCtrl', function() {
 

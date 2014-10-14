@@ -1,1 +1,32 @@
-// Your application styles go here
+// Styles for the EBS Headless Drupal Demo
+
+// Colors
+$EBSorange: #999;
+$EBSgrey: #ccc;
+$EBSwhite: #fff;
+
+// Vars
+$EBSbasePadding: 10px;
+$EBSbasePaddingSmall: 5px;
+
+h5, h6 {
+	display: block;
+	background-color: $EBSwhite;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+h5 {
+	background-color: $EBSorange;
+	padding: $EBSbasePadding;
+}
+
+h6 {
+	background-color: $EBSgrey;
+	padding: $EBSbasePaddingSmall;
+}
+
+.EBScontent {
+	padding: $EBSbasePadding;
+}

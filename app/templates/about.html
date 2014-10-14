@@ -3,8 +3,9 @@
     <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
   <ion-content class="has-header">
+  <h5> This page pulls a single node by NID.</h5>
+  <h6>You are now viewing drupal NID: {{about.nid}}</h6>
      <!-- Bind the body to a div to account for html format. Notice the scheme for digging into the views generated array -->
-  <div ng-bind-html="announcment.body.und.0.safe_value"></div>
-  <h5>You are now viewing drupal NID: {{about.nid}}</h5>
+  <div class="EBScontent" ng-bind-html="about.body.und.0.safe_value"></div>
   </ion-content>
 </ion-view>

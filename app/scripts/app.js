@@ -2,7 +2,7 @@
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // the 2nd parameter is an array of 'requires.' In this case ionic, our controllers, and our services
-angular.module('YouthworksMobil', ['ionic', 'YouthworksMobil.controllers', 'YouthworksMobil.services'])
+angular.module('EBSheadlessDrupal', ['ionic', 'EBSheadlessDrupal.controllers', 'EBSheadlessDrupal.services'])
 
 // Some things relatedb specific to native (cordova) build, if doing so.
 .run(function($ionicPlatform) {

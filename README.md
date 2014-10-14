@@ -1,7 +1,7 @@
-YWmobile
+EBS Headless Drupal Demo
 ========
 
-Drupal 7 "Headless" Build.
+Drupal 7 "Headless" Build. Meant as a demo starting point. Currently points to sandbox Pantheon install set up for this demo. This is meant to correspond with the presentation by Dan Rogers @ DrupalCamp Baltimore, 2014. The concept is creating a web or native app utilizing industry standard .js libraries, and connecting to the backend of a new or existing D7 site via services.
 
 Components:
 - D7
@@ -10,10 +10,26 @@ Components:
 - Grunt.js
 - Bower
 
-Modules:
+Other Notes:
+- You will need xcode with CLI, if compiling for native iOs
+- Can also compile to other cordova supprted devices (read, android), but that is beyond the scope of this demo.
+
+D7 Modules:
 - Services
-- CORS
-- Views
+- CORS (for cross site interaction)
+- Views (for serving JSON views)
+
+Useful Commands:
+
+iOs
+- grunt platform:add:ios
+- grunt build
+- grunt emulate:ios
+
+Web
+- grunt serve
+-- Creates localhost in browser, compass watches SASS for changes. Great way for styling/debugging native quickly as well.
+
 
 Issues:
 - The json coming out of drupal can be array hell. WSCII initiative has some paths forward, and there are a few other ways around this, which I won't go into here.
