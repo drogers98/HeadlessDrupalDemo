@@ -33,12 +33,53 @@ angular.module('EBSheadlessDrupal.services', [])
 })
 
 
-// Call A specific node by NID.
-.factory('AboutService', function(EBSheadlessDrupalAPI) {
+// Call A specific user by UID.
+.factory('UserService', function(EBSheadlessDrupalAPI) {
   return {
-    about: function() {
+    user: function() {
+      // Call the API, and define the specific endpoint
+      return EBSheadlessDrupalAPI.loadEndpoint('user/1.json');
+    }
+  };
+})
+
+// Call A specific node by UID.
+.factory('NodeService', function(EBSheadlessDrupalAPI) {
+  return {
+    node: function() {
       // Call the API, and define the specific endpoint
       return EBSheadlessDrupalAPI.loadEndpoint('node/1.json');
     }
   };
+})
+
+.factory('DrupalUserLogin', function($http, $q){
+//Endpoints Variables
+
+var loginEndpoint = 'http://test-youth-works.gotpantheon.com/api/user/login';
+return{
+/*
+* Login against the Drupal Service
+*/
+doLogin : function( userdata ){
+console.log(userdata);
+var defer = $q.defer();
+$http({
+url : loginEndpoint,
+dataType : 'json',
+method : 'POST',
+data : userdata,
+headers : {
+"Content-Type": "application/x-www-form-urlencoded"
+}
+}).
+success(function(data, status, headers, config){
+defer.resolve(data);
+}).
+error(function(data, status, headers, config){
+defer.reject(data);
 });
+return defer.promise;
+}
+}
+})

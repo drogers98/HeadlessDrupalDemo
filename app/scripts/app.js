@@ -67,21 +67,22 @@ angular.module('EBSheadlessDrupal', ['ionic', 'EBSheadlessDrupal.controllers', '
       }
     })
 
-    .state('app.about', {
-      url: '/about',
+    .state('app.user', {
+      url: '/user',
       views: {
         'menuContent' :{
-          templateUrl: 'templates/about.html',
-          controller: 'AboutCtrl'
+          templateUrl: 'templates/user.html',
+          controller: 'UserCtrl'
         }
       }
     })
 
-    .state('app.contact', {
-      url: '/contact',
+    .state('app.node', {
+      url: '/node',
       views: {
         'menuContent' :{
-          templateUrl: 'templates/contact.html'
+          templateUrl: 'templates/node.html',
+          controller: 'NodeCtrl'
         }
       }
     });
