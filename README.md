@@ -1,7 +1,7 @@
 EBS Headless Drupal Demo
 ========
 
-Drupal 7 "Headless" Build. Meant as a demo starting point. Currently points to sandbox Pantheon install set up for this demo. This is meant to correspond with the presentation by Dan Rogers @ DrupalCamp Baltimore, 2014. The concept is creating a web or native app utilizing industry standard .js libraries, and connecting to the backend of a new or existing D7 site via services.
+Drupal 7 "Headless" Build. Meant as a demo starting point. Currently points to sandbox Pantheon install set up for this demo. This is meant to correspond with the presentation by Dan Rogers @ DrupalCamp Baltimore, 2014. The concept is creating a web or native app utilizing industry standard .js libraries, and connecting to the backend of a new or existing D7 site simply via services.
 
 You can view our demo D7 Install here: http://dev-headlessdrupal.pantheon.io
 
@@ -54,10 +54,10 @@ Step 1: Create a REST Endpoint
 - Choose "add new"
 - use ```api``` for machine name, choose REST for the server, use ```api``` for the endpoint.
 - In resources, enable retrieve for node, user, and views.
-- 
+
 Step 2: Setup CORS
 - admin/config/services/cors
-- In the domains field, add ```*|http://127.0.0.1:9000```
+- In the domains field, add ```*|http://127.0.0.1:9000``` (The IP set in your grunt.js file!)
 
 Step: Create a view
 - admin/structure/views
@@ -74,10 +74,12 @@ Step: Add fields to user
 
 Issues:
 -----------
-- The json coming out of drupal can be array hell. WSCII initiative has some paths forward, and there are a few other ways around this, which I won't go into here. If you use views, it gets a lot easier BTW!
+- The json coming out of (stock) drupal can be array hell. If you use views, it gets a lot easier BTW! WSCII initiative has some paths forward for D8, and there are a few other ways around this in D7, which I won't go into here. 
 
 Helpful Resources:
 -----------
 - http://friendlymachine.net/posts/headless-drupal-it-just-might-be-bigger-deal-twig
 - https://austin2014.drupal.org/session/build-drupal-free-theme-8s-rest-api-and-javascript
 - https://www.getpantheon.com/blog/headless-drupal-demo-working-code-and-call-action
+
+May the force be with you young Padawan.
