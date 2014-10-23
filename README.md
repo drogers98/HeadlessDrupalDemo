@@ -19,18 +19,22 @@ D7 Modules:
 - CORS (for cross site interaction)
 - Views (for serving JSON views)
 
-Useful Commands:
+Contributing: 
 
-iOs
-- grunt platform:add:ios
-- grunt build
-- grunt emulate:ios
+1. git clone git@github.com:rogerseyebyte/EBSheadlessDrupal.git
+2. npm install *append sudo if needed*
+3. bower install
+4. grunt build
+(WEB)
+5. grunt serve *or*
+6. grunt serve:compress *for a preview of the optimized application*
+(IOS)
+7. grunt platform:add:ios
+8. grunt build
+9. grunt emulate:ios --livereload *similar to grunt serve adding --consolelogs flag will print logs to terminal*
 
-Web
-- grunt serve
--- Creates localhost in browser, compass watches SASS for changes. Great way for styling/debugging native quickly as well.
-
-
+if prompted 'unable to find a suitable version for angular'
+choose most appropriate version or latest option.
 Issues:
 - The json coming out of drupal can be array hell. WSCII initiative has some paths forward, and there are a few other ways around this, which I won't go into here.
 
