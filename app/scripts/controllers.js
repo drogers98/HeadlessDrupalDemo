@@ -28,6 +28,30 @@ angular.module('EBSheadlessDrupal.controllers', [])
 			});
 		});
 	})
+	
+	// Controller that pulls events list from our services.
+.controller('WhatIndexCtrl', function($scope, $stateParams, WhatService) {
+	$scope.what;
+
+	WhatService.whats().then(function(whats){
+		$scope.whats = whats.data;
+		//console.log($scope.setups);
+	});
+})
+
+
+// Controller that pulls events list from our services, and binds it to an individual view for display on the detail page.
+.controller('WhatDetailCtrl', function($scope, $stateParams, WhatService) {
+	$scope.what;
+	var id = $stateParams.id;
+
+	WhatService.whats().then(function(whats){
+		WhatService.what(whats.data,id, function(what){
+			$scope.what = what;
+			//console.log($scope.setup);
+			});
+		});
+	})
 
 // Controller that pulls single node JSON from our services, and binds to about.
 	.controller('UserCtrl', function($scope, UserService) {

@@ -52,4 +52,21 @@ code {
 			list-style-type: disc;
 		}
 	}
+	// Lets style some links, and simple buttons, shall we.
+	a {
+	// General links
+	text-decoration: none;
+	&.btn {
+	// Now links with the class btn
+		display:block;
+		text-align: center;
+		color: $EBSwhite;
+		background-color: $EBSorange;
+		padding: $EBSbasePadding;
+		margin: $EBSbasePadding;
+		&:hover {
+			background-color: lighten($EBSorange, 20%);
+		}
+	}
+	}
 }

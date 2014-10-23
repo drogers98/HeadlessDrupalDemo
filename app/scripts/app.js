@@ -57,6 +57,26 @@ angular.module('EBSheadlessDrupal', ['ionic', 'EBSheadlessDrupal.controllers', '
         }
       }
     })
+    
+        .state('app.whats', {
+      url: '/whats',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/whats.html',
+          controller: 'WhatIndexCtrl'
+        }
+      }
+    })
+
+    .state('app.what', {
+      url: '/what/:id',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/what.html',
+          controller: 'WhatDetailCtrl'
+        }
+      }
+    })
 
     .state('app.user', {
       url: '/user',

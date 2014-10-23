@@ -32,6 +32,23 @@ angular.module('EBSheadlessDrupal.services', [])
   };
 })
 
+// Call A specific views JSON.
+.factory('WhatService', function(EBSheadlessDrupalAPI) {
+  return {
+    whats: function() {
+      // Call the API, and define the specific endpoint
+      return EBSheadlessDrupalAPI.loadEndpoint('views/what_it_is.json');
+    },
+    what: function(whats,id,callback){
+      var findwhat = {};
+      for(var i=0;i<whats.length;i++) {
+        findwhat[whats[i].nid] = whats[i];
+      }
+      callback(findwhat[id]);
+    }
+  };
+})
+
 
 // Call A specific user by UID.
 .factory('UserService', function(EBSheadlessDrupalAPI) {
