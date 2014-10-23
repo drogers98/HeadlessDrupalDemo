@@ -18,11 +18,12 @@ Other Notes:
 
 D7 Required Modules:
 -----------
-- Services
+- Services (for the endpoint)
 - CORS (for cross site interaction)
-- Views (for serving JSON views)
+- Views (for collections)
+- Services Views (for serving JSON views)
 
-Installing: 
+Installing App: 
 -----------
 ```
 git clone git@github.com:rogerseyebyte/EBSheadlessDrupal.git
@@ -39,6 +40,33 @@ git clone git@github.com:rogerseyebyte/EBSheadlessDrupal.git
 
 if prompted 'unable to find a suitable version for angular'
 choose most appropriate version or latest option.
+
+Drupal Setup:
+-----------
+- Install D7
+- Install Dependencies (views, services, services_views, cors, ctools, libraries)
+- Enable Dependencies
+
+Step 1: Create a REST Endpoint
+- admin/structure/services. 
+- Choose "add new"
+- use ```api``` for machine name, choose REST for the server, use ```api``` for the endpoint.
+- In resources, enable retrieve for node, user, and views.
+- 
+Step 2: Setup CORS
+- admin/config/services/cors
+- In the domains field, add ```*|http://127.0.0.1:9000```
+
+Step: Create a view
+- admin/structure/views
+- Choose "create new"
+- Setup view to your liking.
+
+Step: Add fields to user
+- admin/config/people/accounts/fields
+- Add fields for Name, Bio (field_name, field_bio)
+- Fill in these fields for user 1 (That's you admin!)
+- Set permissions for anon users to "view user profile" in admin/people/permissions
 
 Issues:
 -----------
