@@ -24,7 +24,6 @@ D7 Required Modules:
 
 Installing: 
 -----------
-1. Clone the git repository 
 ```
 git clone git@github.com:rogerseyebyte/EBSheadlessDrupal.git
 ```
