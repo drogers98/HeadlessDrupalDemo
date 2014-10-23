@@ -22,18 +22,18 @@ D7 Modules:
 Contributing: 
 
 1. Clone the git repository 
-''' 
+```
 git clone git@github.com:rogerseyebyte/EBSheadlessDrupal.git
-'''
-2. ''' npm install ''' *append sudo if needed*
-3. ''' bower install '''
-4. ''' grunt build ''' (WEB)
-5. ''' grunt serve ''' *or*
-6. ''' grunt serve:compress ''' *for a preview of the optimized application*
+```
+2. ``` npm install ``` *append sudo if needed*
+3. ``` bower install ```
+4. ``` grunt build ``` (WEB)
+5. ``` grunt serve ``` *or*
+6. ``` grunt serve:compress ``` *for a preview of the optimized application*
 (IOS)
-7. ''' grunt platform:add:ios ''' 
-8. ''' grunt build '''
-9. ''' grunt emulate:ios --livereload ''' *similar to grunt serve adding --consolelogs flag will print logs to terminal*
+7. ``` grunt platform:add:ios ``` 
+8. ``` grunt build ```
+9. ``` grunt emulate:ios --livereload ``` *similar to grunt serve adding --consolelogs flag will print logs to terminal*
 
 if prompted 'unable to find a suitable version for angular'
 choose most appropriate version or latest option.
