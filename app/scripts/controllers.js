@@ -7,24 +7,24 @@ angular.module('EBSheadlessDrupal.controllers', [])
 
 // Controller that pulls events list from our services.
 .controller('EventIndexCtrl', function($scope, $stateParams, EventService) {
-	$scope.announcment;
+	$scope.setup;
 
-	EventService.announcments().then(function(announcments){
-		$scope.announcments = announcments.data;
-		//console.log($scope.announcments);
+	EventService.setups().then(function(setups){
+		$scope.setups = setups.data;
+		//console.log($scope.setups);
 	});
 })
 
 
 // Controller that pulls events list from our services, and binds it to an individual view for display on the detail page.
 .controller('EventDetailCtrl', function($scope, $stateParams, EventService) {
-	$scope.announcment;
+	$scope.setup;
 	var id = $stateParams.id;
 
-	EventService.announcments().then(function(announcments){
-		EventService.announcment(announcments.data,id, function(announcment){
-			$scope.announcment = announcment;
-			//console.log($scope.announcment);
+	EventService.setups().then(function(setups){
+		EventService.setup(setups.data,id, function(setup){
+			$scope.setup = setup;
+			//console.log($scope.setup);
 			});
 		});
 	})

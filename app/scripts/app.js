@@ -47,21 +47,21 @@ angular.module('EBSheadlessDrupal', ['ionic', 'EBSheadlessDrupal.controllers', '
       }
     })
 
-    .state('app.announcements', {
-      url: '/announcements',
+    .state('app.steps', {
+      url: '/steps',
       views: {
         'menuContent': {
-          templateUrl: 'templates/announcements.html',
+          templateUrl: 'templates/steps.html',
           controller: 'EventIndexCtrl'
         }
       }
     })
 
-    .state('app.announcement', {
-      url: '/announcement/:id',
+    .state('app.step', {
+      url: '/step/:id',
       views: {
         'menuContent': {
-          templateUrl: 'templates/announcement.html',
+          templateUrl: 'templates/step.html',
           controller: 'EventDetailCtrl'
         }
       }

@@ -9,6 +9,14 @@ $EBSwhite: #fff;
 $EBSbasePadding: 10px;
 $EBSbasePaddingSmall: 5px;
 
+//Reset responsive images
+img {
+	max-width: 100%;
+	width: auto;
+	height: auto;
+}
+
+// Typography
 h5, h6 {
 	display: block;
 	background-color: $EBSwhite;

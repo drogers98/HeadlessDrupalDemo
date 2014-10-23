@@ -5,7 +5,7 @@ angular.module('EBSheadlessDrupal.services', [])
 .factory('EBSheadlessDrupalAPI', function($http) {
 	var proto = $http.get,
     	// Base path of the API we set up
-        basePath = 'http://test-youth-works.gotpantheon.com/api/',
+        basePath = 'http://dev-headlessdrupal.pantheon.io/api/',
 		callback = '?callback=JSON_CALLBACK';
 
 	   return {
@@ -18,16 +18,16 @@ angular.module('EBSheadlessDrupal.services', [])
 // Call A specific views JSON.
 .factory('EventService', function(EBSheadlessDrupalAPI) {
   return {
-    announcments: function() {
+    setups: function() {
       // Call the API, and define the specific endpoint
-      return EBSheadlessDrupalAPI.loadEndpoint('views/announcements.json');
+      return EBSheadlessDrupalAPI.loadEndpoint('views/setup.json');
     },
-    announcment: function(announcments,id,callback){
-      var findAnnouncment = {};
-      for(var i=0;i<announcments.length;i++) {
-        findAnnouncment[announcments[i].nid] = announcments[i];
+    setup: function(setups,id,callback){
+      var findsetup = {};
+      for(var i=0;i<setups.length;i++) {
+        findsetup[setups[i].nid] = setups[i];
       }
-      callback(findAnnouncment[id]);
+      callback(findsetup[id]);
     }
   };
 })
@@ -47,8 +47,8 @@ angular.module('EBSheadlessDrupal.services', [])
 .factory('NodeService', function(EBSheadlessDrupalAPI) {
   return {
     node: function() {
-      // Call the API, and define the specific endpoint
-      return EBSheadlessDrupalAPI.loadEndpoint('node/1.json');
+      // Call the API, and define the specific endpoint. In this case node 3 is the "About us" page.
+      return EBSheadlessDrupalAPI.loadEndpoint('node/3.json');
     }
   };
 })
