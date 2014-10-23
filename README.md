@@ -3,6 +3,8 @@ EBS Headless Drupal Demo
 
 Drupal 7 "Headless" Build. Meant as a demo starting point. Currently points to sandbox Pantheon install set up for this demo. This is meant to correspond with the presentation by Dan Rogers @ DrupalCamp Baltimore, 2014. The concept is creating a web or native app utilizing industry standard .js libraries, and connecting to the backend of a new or existing D7 site via services.
 
+You can view our demo D7 Install here: http://dev-headlessdrupal.pantheon.io
+
 Components:
 -----------
 - D7
@@ -59,8 +61,10 @@ Step 2: Setup CORS
 
 Step: Create a view
 - admin/structure/views
-- Choose "create new"
+- Choose "create new" (for the demo, mine was named "setup")
 - Setup view to your liking.
+- Check out the JSON at /api/views/YOUR_VIEW_NAME.json (for the demo, mine was named "setup")
+- Bear in mind you will need to modify pages/services.js/app.js/controller.js with this new view name most likely.
 
 Step: Add fields to user
 - admin/config/people/accounts/fields
@@ -70,7 +74,7 @@ Step: Add fields to user
 
 Issues:
 -----------
-- The json coming out of drupal can be array hell. WSCII initiative has some paths forward, and there are a few other ways around this, which I won't go into here.
+- The json coming out of drupal can be array hell. WSCII initiative has some paths forward, and there are a few other ways around this, which I won't go into here. If you use views, it gets a lot easier BTW!
 
 Helpful Resources:
 -----------
