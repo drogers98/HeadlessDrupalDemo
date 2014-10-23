@@ -21,7 +21,10 @@ D7 Modules:
 
 Contributing: 
 
-1. Clone the git repository ''' git clone git@github.com:rogerseyebyte/EBSheadlessDrupal.git '''
+1. Clone the git repository 
+''' 
+git clone git@github.com:rogerseyebyte/EBSheadlessDrupal.git
+'''
 2. ''' npm install ''' *append sudo if needed*
 3. ''' bower install '''
 4. ''' grunt build ''' (WEB)
