@@ -16,6 +16,9 @@ img {
 	height: auto;
 }
 
+h4 {
+	
+}
 // Typography
 h5, h6 {
 	display: block;
@@ -35,6 +38,18 @@ h6 {
 	padding: $EBSbasePaddingSmall;
 }
 
+// Lets syle some code!
+code {
+	background-color: $EBSgrey;
+}
 .EBScontent {
 	padding: $EBSbasePadding;
+	//reset some ionic list stuff so they display!
+	ul, ol {
+		padding-left: 20px;
+		margin-bottom: $EBSbasePadding;
+		li {
+			list-style-type: disc;
+		}
+	}
 }

@@ -8,6 +8,7 @@ You can view our demo D7 Install here: http://dev-headlessdrupal.pantheon.io
 Components:
 -----------
 - D7
+- npm
 - Angular.js
 - ionic
 - Grunt.js
@@ -45,28 +46,28 @@ choose most appropriate version or latest option.
 
 Drupal Setup:
 -----------
+Step 1: Base Install
 - Install D7
 - Install Dependencies (views, services, services_views, cors, ctools, libraries)
 - Enable Dependencies
 
-Step 1: Create a REST Endpoint
+Step 2: Create a REST Endpoint
 - admin/structure/services. 
 - Choose "add new"
 - use ```api``` for machine name, choose REST for the server, use ```api``` for the endpoint.
 - In resources, enable retrieve for node, user, and views.
 
-Step 2: Setup CORS
+Step 3: Setup CORS
 - admin/config/services/cors
 - In the domains field, add ```*|http://127.0.0.1:9000``` (The IP set in your grunt.js file!)
 
-Step: Create a view
+Step 4: Create a view
 - admin/structure/views
-- Choose "create new" (for the demo, mine was named "setup")
-- Setup view to your liking.
-- Check out the JSON at /api/views/YOUR_VIEW_NAME.json (for the demo, mine was named "setup")
-- Bear in mind you will need to modify pages/services.js/app.js/controller.js with this new view name most likely.
+- Clone my view here: https://gist.github.com/rogerseyebyte/4b29270043028d19c187
+- This creates a view of articles tagged with "setup," so make a few dummy articles and tag them.
+- Check out the JSON at /api/views/setup.json
 
-Step: Add fields to user
+Step 5: Add fields to user
 - admin/config/people/accounts/fields
 - Add fields for Name, Bio (field_name, field_bio)
 - Fill in these fields for user 1 (That's you admin!)

@@ -52,34 +52,3 @@ angular.module('EBSheadlessDrupal.services', [])
     }
   };
 })
-
-.factory('DrupalUserLogin', function($http, $q){
-//Endpoints Variables
-
-var loginEndpoint = 'http://test-youth-works.gotpantheon.com/api/user/login';
-return{
-/*
-* Login against the Drupal Service
-*/
-doLogin : function( userdata ){
-console.log(userdata);
-var defer = $q.defer();
-$http({
-url : loginEndpoint,
-dataType : 'json',
-method : 'POST',
-data : userdata,
-headers : {
-"Content-Type": "application/x-www-form-urlencoded"
-}
-}).
-success(function(data, status, headers, config){
-defer.resolve(data);
-}).
-error(function(data, status, headers, config){
-defer.reject(data);
-});
-return defer.promise;
-}
-}
-})

@@ -38,15 +38,6 @@ angular.module('EBSheadlessDrupal', ['ionic', 'EBSheadlessDrupal.controllers', '
       }
     })
 
-    .state('app.routes', {
-      url: '/routes',
-      views: {
-        'menuContent' :{
-          templateUrl: 'templates/routes.html'
-        }
-      }
-    })
-
     .state('app.steps', {
       url: '/steps',
       views: {
