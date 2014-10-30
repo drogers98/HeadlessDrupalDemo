@@ -7,9 +7,10 @@
   <h6>You are now viewing drupal User UID: {{user.uid}}</h6>
      <!-- Bind the body to a div to account for html format. Notice the scheme for digging into the views generated array -->
   <div class="EBScontent">
+  <div id="ProfilePictureWrap">
   <img src="{{user.picture.url}}">
-  <p>Who goes by the codename <strong>{{user.name}}</strong> on this drupal install.</p>
-	{{user.field_bio.und.0.safe_value}}  
+  </div>
+	<div ng-bind-html="user.field_bio.und.0.value"></div> 
   </div>  
   </ion-content>
 </ion-view>
