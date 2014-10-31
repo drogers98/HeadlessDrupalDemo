@@ -1,8 +1,14 @@
 // Styles for the EBS Headless Drupal Demo
 
+// Script font for headers
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+
+
 // Colors
-$EBSorange: #999;
+$EBSorange: #FAAF42;
+$EBSdkOrange: darken($EBSorange, 20%);
 $EBSgrey: #ccc;
+$EBSdkGrey: darken($EBSgrey, 20%);
 $EBSwhite: #fff;
 
 // Vars
@@ -16,10 +22,14 @@ img {
 	height: auto;
 }
 
-h4 {
-	
-}
+
 // Typography
+
+h4 {
+	font-family: "Lobster";
+	color: $EBSorange;
+}
+
 h5, h6 {
 	display: block;
 	background-color: $EBSwhite;
@@ -29,7 +39,7 @@ h5, h6 {
 }
 
 h5 {
-	background-color: $EBSorange;
+	background-color: $EBSdkGrey;
 	padding: $EBSbasePadding;
 }
 
@@ -42,8 +52,19 @@ h6 {
 code {
 	background-color: $EBSgrey;
 }
+
+.bar.bar-stable {
+	background-color: $EBSorange;
+}
 .EBScontent {
 	padding: $EBSbasePadding;
+	// Let's color some links
+	a {
+	color: $EBSorange;
+	&:hover, &:visited{
+		color: $EBSdkOrange;
+	}
+}
 	//reset some ionic list stuff so they display!
 	ul, ol {
 		padding-left: 20px;
@@ -61,32 +82,84 @@ code {
 		display:block;
 		text-align: center;
 		color: $EBSwhite;
-		background-color: $EBSorange;
+		background-color: $EBSgrey;
 		padding: $EBSbasePadding;
 		margin: $EBSbasePadding;
 		&:hover {
-			background-color: lighten($EBSorange, 20%);
+			background-color: $EBSdkGrey;
 		}
 	}
 	}
 }
 
-
 // User Profile Picture
-
 #ProfilePictureWrap {
-	max-width: 100px;
+	max-width: 150px;
 	width:auto;
 	height:auto;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-
+// Front page animation
+ 
+@keyframes bannermove {
+ 0% {
+    margin-left: 0px;
+ }
+ 100% {
+    margin-left: -500px;
+ }
+ 
+}
+ 
+@-moz-keyframes bannermove {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -500px;
+ }
+ 
+}
+ 
+@-webkit-keyframes bannermove {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -500px;
+ }
+ 
+}
+ 
+@-ms-keyframes bannermove {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -500px;
+ }
+ 
+}
+ 
+@-o-keyframes bannermove {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -500px;
+ }
+ 
+}
 #scroller {
 	height:100px;
     background: url(../images/test.png);
     background-position: 0px 0px;
 	background-repeat: repeat-x;
-
+	-webkit-animation: bannermove 30s linear infinite;
+       -moz-animation: bannermove 30s linear infinite;
+        -ms-animation: bannermove 30s linear infinite;
+         -o-animation: bannermove 30s linear infinite;
+            animation: bannermove 30s linear infinite;
 }

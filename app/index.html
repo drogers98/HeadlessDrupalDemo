@@ -16,27 +16,6 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
     
-    
-
-	<script language="javascript">
-	// Simple JS animation for homepage
-	function StartMove() {
-	var cssBGImage=new Image();
-	cssBGImage.src="images/test.png";
-	window.cssMaxWidth=cssBGImage.width;
-	window.cssXPos=0;
-	setInterval("MoveBackGround()",50);
-	}
-	function MoveBackGround () {
-	window.cssXPos=window.cssXPos+1;
-	if (window.cssXPos>=window.cssMaxWidth) {
-	window.cssXPos=0;
-	}
-	toMove=document.getElementById("scroller");
-	toMove.style.backgroundPosition=window.cssXPos+"px 0px";
-	}
-	</script>
-
   </head>
 
   <body ng-app="EBSheadlessDrupal" onload="StartMove()">
