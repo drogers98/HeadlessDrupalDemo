@@ -1,7 +1,7 @@
 'use strict';
 angular.module('EBSheadlessDrupal.services', [])
 
-// Set the base of operations for the JSON calls. 
+// Set the base of operations for the JSON calls.
 .factory('EBSheadlessDrupalAPI', function($http) {
 	var proto = $http.get,
     	// Base path of the API we set up

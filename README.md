@@ -26,7 +26,7 @@ D7 Required Modules:
 - Views (for collections)
 - Services Views (for serving JSON views)
 
-Installing App: 
+Installing App:
 -----------
 ```
 git clone git@github.com:rogerseyebyte/EBSheadlessDrupal.git
@@ -37,7 +37,7 @@ git clone git@github.com:rogerseyebyte/EBSheadlessDrupal.git
 5. ``` grunt serve ``` *or*
 6. ``` grunt serve:compress ``` *for a preview of the optimized application*
 (IOS)
-7. ``` grunt platform:add:ios ``` 
+7. ``` grunt platform:add:ios ```
 8. ``` grunt build ```
 9. ``` grunt emulate:ios --livereload ``` *similar to grunt serve adding --consolelogs flag will print logs to terminal*
 
@@ -52,7 +52,7 @@ Step 1: Base Install
 - Enable Dependencies
 
 Step 2: Create a REST Endpoint
-- admin/structure/services. 
+- admin/structure/services.
 - Choose "add new"
 - use ```api``` for machine name, choose REST for the server, use ```api``` for the endpoint.
 - In resources, enable retrieve for node, user, and views.
@@ -67,7 +67,7 @@ Step 4: Create a views
 - And another one here: https://gist.github.com/rogerseyebyte/11a7f3f0de41b2d029c2
 - This creates a view of articles tagged with "setup," so make a few dummy articles and tag them.
 - Check out the JSON at /api/views/setup.json
-- Side Note: If you dont include a label on fields like "body" in the view, the JSON sometimes gets wanky. 
+- Side Note: If you dont include a label on fields like "body" in the view, the JSON sometimes gets wanky.
 
 Step 5: Add fields to user
 - admin/config/people/accounts/fields
@@ -77,7 +77,7 @@ Step 5: Add fields to user
 
 Issues:
 -----------
-- The json coming out of (stock) drupal can be array hell. If you use views, it gets a lot easier BTW! WSCII initiative has some paths forward for D8, and there are a few other ways around this in D7, which I won't go into here. 
+- The json coming out of (stock) drupal can be array hell. If you use views, it gets a lot easier BTW! WSCII initiative has some paths forward for D8, and there are a few other ways around this in D7, which I won't go into here.
 
 Helpful Resources:
 -----------

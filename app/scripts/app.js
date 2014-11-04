@@ -57,7 +57,7 @@ angular.module('EBSheadlessDrupal', ['ionic', 'EBSheadlessDrupal.controllers', '
         }
       }
     })
-    
+
         .state('app.whats', {
       url: '/whats',
       views: {
