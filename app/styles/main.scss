@@ -5,7 +5,7 @@
 
 
 // Colors
-$EBSorange: #FAAF42;
+$EBSorange: #FF9F35;
 $EBSdkOrange: darken($EBSorange, 20%);
 $EBSgrey: #ccc;
 $EBSdkGrey: darken($EBSgrey, 20%);
@@ -154,12 +154,33 @@ code {
 }
 #scroller {
 	height:100px;
-    background: url(../images/test.png);
+    background: url(../images/Headless_Drupal-01.png);
     background-position: 0px 0px;
+    background-size: auto 108px;
 	background-repeat: repeat-x;
 	-webkit-animation: bannermove 30s linear infinite;
        -moz-animation: bannermove 30s linear infinite;
         -ms-animation: bannermove 30s linear infinite;
          -o-animation: bannermove 30s linear infinite;
             animation: bannermove 30s linear infinite;
+}
+.mustache {
+	margin-top: -49px;
+	text-align: center;
+	img {
+		max-width: 100px;
+	}
+}
+.headlessGraphicBtm {
+	background: url(../images/Headless_Drupal-03.png);
+    background-position: center -3px;
+    background-size: auto 108px;
+    background-repeat: no-repeat;
+    padding-top: 110px;
+    text-align: center;
+    h1 {
+	font-family: "Lobster";
+	color: $EBSorange;
+    }
+
 }

@@ -2,10 +2,10 @@
 <widget id="com.example.EBSheadlessDrupal" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>EBSheadlessDrupal</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        A sample Apache Cordova application that responds to the deviceready event, and pulls from a DEV drupal install. Drupal Camp Baltimore, represent represent.
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="rogers@eyebytesolutions.com" href="http://www.eyebytesolutions.com">
+        Eye Byte Solutions
     </author>
     <content src="index.html" />
     <access origin="*" />
