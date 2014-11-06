@@ -1,4 +1,4 @@
-// Styles for the EBS Headless Drupal Demo
+// Styles for the EBS Headless Drupal Demo. DrupalCamp Baltimore, represent.
 
 // Script font for headers
 @import url(http://fonts.googleapis.com/css?family=Lobster);
@@ -11,17 +11,16 @@ $EBSgrey: #ccc;
 $EBSdkGrey: darken($EBSgrey, 20%);
 $EBSwhite: #fff;
 
-// Vars
+// Variables
 $EBSbasePadding: 10px;
 $EBSbasePaddingSmall: 5px;
 
-//Reset responsive images
+//Reset responsive images, like a boss.
 img {
 	max-width: 100%;
 	width: auto;
 	height: auto;
 }
-
 
 // Typography
 
@@ -53,9 +52,12 @@ code {
 	background-color: $EBSgrey;
 }
 
+// And make our navbar Orange
 .bar.bar-stable {
 	background-color: $EBSorange;
 }
+
+// And give ourselves a content repository
 .EBScontent {
 	padding: $EBSbasePadding;
 	// Let's color some links
@@ -72,6 +74,13 @@ code {
 		li {
 			list-style-type: disc;
 		}
+	}
+	// And center the images in there.
+	img {
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
 	}
 	// Lets style some links, and simple buttons, shall we.
 	a {
@@ -101,7 +110,7 @@ code {
 	margin-right: auto;
 }
 
-// Front page animation
+// Front page animation. kinda busch league, sorry :(
  
 @keyframes bannermove {
  0% {
@@ -152,7 +161,7 @@ code {
  }
  
 }
-#scroller {
+.headlessGraphicTop {
 	height:100px;
     background: url(../images/Headless_Drupal-01.png);
     background-position: 0px 0px;

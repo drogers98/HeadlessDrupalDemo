@@ -5,6 +5,8 @@ Drupal 7 "Headless" Build. Meant as a demo starting point. Currently points to s
 
 You can view our demo D7 Install here: http://dev-headlessdrupal.pantheon.io
 
+And the demo app here: http://headless.eyebytesolutions.com
+
 Components:
 -----------
 - D7
