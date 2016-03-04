@@ -65,8 +65,8 @@ Step 3: Setup CORS
 
 Step 4: Create a views
 - admin/structure/views
-- Clone my view here: https://gist.github.com/rogerseyebyte/4b29270043028d19c187
-- And another one here: https://gist.github.com/rogerseyebyte/11a7f3f0de41b2d029c2
+- Clone my view here: https://gist.github.com/drogers98/4b29270043028d19c187
+- And another one here: https://gist.github.com/drogers98/11a7f3f0de41b2d029c2
 - This creates a view of articles tagged with "setup," so make a few dummy articles and tag them.
 - Check out the JSON at /api/views/setup.json
 - Side Note: If you dont include a label on fields like "body" in the view, the JSON sometimes gets wanky.
