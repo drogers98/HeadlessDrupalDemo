@@ -1,4 +1,4 @@
-EBS Headless Drupal Demo
+Headless Drupal Demo
 ========
 
 Drupal 7 "Headless" Build. Meant as a demo starting point. Currently points to sandbox Pantheon install set up for this demo. This is meant to correspond with the presentation by Dan Rogers @ DrupalCamp Baltimore, 2014. The concept is creating a web or native app utilizing industry standard .js libraries, and connecting to the backend of a new or existing D7 site simply via services.
@@ -31,7 +31,7 @@ D7 Required Modules:
 Installing App:
 -----------
 ```
-git clone git@github.com:drogers98/EBSheadlessDrupal.git
+git clone git@github.com:drogers98/HeadlessDrupalDemo.git
 ```
 2. ``` npm install ``` *append sudo if needed*
 3. ``` bower install ```
